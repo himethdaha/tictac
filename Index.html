@@ -4,7 +4,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <h1 class="header">tic-tac-toe</h1>
+    <!--Buttons. player scores-->
+    <div class="menu">
+      <button class="new-game">new game</button>
+      <button class="end-game">end game</button>
+      <!--Player scores-->
+      <div class="player-menu">
+        <label class="player player-1"
+          >Player 1 - <span class="mark player-1-mark">X</span></label
+        >
+        <label class="score player-1"
+          >Score - <span class="player-1-score">0</span></label
+        >
+      </div>
+      <!--Player scores-->
+      <div class="player-menu">
+        <label class="player player-2"
+          >Player 2 - <span class="mark player-2-mark">O</span></label
+        >
+        <label class="score player-2"
+          >Score - <span class="player-2-score">0</span></label
+        >
+      </div>
+    </div>
+    <!--Grid-->
+    <div class="container">
+      <div class="cell cell-1"></div>
+      <div class="cell cell-2"></div>
+      <div class="cell cell-3"></div>
+      <div class="cell cell-4"></div>
+      <div class="cell cell-5"></div>
+      <div class="cell cell-6"></div>
+      <div class="cell cell-7"></div>
+      <div class="cell cell-8"></div>
+      <div class="cell cell-9"></div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Gentium Book Plus", serif;
+  font-size: 62.5%;
+}
+
+.header {
+  font-size: 7rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.new-game,
+.end-game {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.4rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.new-game:hover,
+.end-game:hover {
+  transform: scale(1.1) translateY(3px);
+}
+
+.player-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.player {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.mark {
+  font-weight: 600;
+}
+
+.player-1-mark {
+  color: blue;
+}
+
+.player-2-mark {
+  color: red;
+}
+
+.score {
+  font-size: 2.2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 16rem);
+  grid-template-rows: repeat(3, 16rem);
+  width: 48rem;
+  margin: 10rem auto;
+  gap: 6px;
+  background-color: black;
+}
+
+.cell {
+  background-color: white;
+}
