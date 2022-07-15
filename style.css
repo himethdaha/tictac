@@ -48,19 +48,30 @@ html {
   text-transform: uppercase;
 }
 
-.mark {
+.mark,
+.status {
   font-weight: 600;
 }
 
-.player-1-mark {
+.p1Mark,
+.p2Mark {
+  font-weight: 600;
+  font-size: 10rem;
+  text-align: center;
+}
+
+.player-1-mark,
+.p1Mark {
   color: blue;
 }
 
-.player-2-mark {
+.player-2-mark,
+.p2Mark {
   color: red;
 }
 
-.score {
+.score,
+.status {
   font-size: 2.2rem;
 }
 
@@ -76,4 +87,8 @@ html {
 
 .cell {
   background-color: white;
+}
+
+.cell:hover {
+  cursor: pointer;
 }
