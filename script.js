@@ -58,12 +58,12 @@ newGameBtn.addEventListener("click", () => {
 //If end game is clicked, announce the winner and after 3 seconds reload the page
 endGameBtn.addEventListener("click", () => {
   if (p1ScoreCounter > p2ScoreCounter) {
-    gameStatus.textContent = `PLAYER 1 WON ${p1ScoreCounter} GAMES OUT OF ${totalGames}`;
+    gameStatus.textContent = `PLAYER 1 WON ${p1ScoreCounter} OUT OF ${totalGames}`;
     gameStatus.style.color = "green";
     gameStatus.style.fontSize = "35px";
   }
   if (p2ScoreCounter > p1ScoreCounter) {
-    gameStatus.textContent = `PLAYER 2 WON ${p2ScoreCounter} GAMES OUT OF ${totalGames}`;
+    gameStatus.textContent = `PLAYER 2 WON ${p2ScoreCounter} OUT OF ${totalGames}`;
     gameStatus.style.color = "green";
     gameStatus.style.fontSize = "35px";
   }
@@ -104,7 +104,10 @@ const swapTurns = (event) => {
   checkWinner();
   //Check for a tie
   let result = checkTie();
-  if (result === true) {
+  if (
+    (result === true && gameStatus.textContent !== p1WonStatement) ||
+    gameStatus.textContent !== p2WontStatement
+  ) {
     gameStatus.textContent = drawStatement;
     gameStatus.style.color = "black";
   }
