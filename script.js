@@ -103,10 +103,12 @@ const swapTurns = (event) => {
   //Check for winner after each turn
   checkWinner();
   //Check for a tie
-  // && gameStatus.textContent !== p1WonStatement) ||
-  // gameStatus.textContent !== p2WontStatement
   const result = checkTie();
-  if (result === true) {
+  console.log(result);
+  if (
+    (result === true && gameStatus.textContent !== p1WonStatement) ||
+    gameStatus.textContent !== p2WontStatement
+  ) {
     gameStatus.textContent = drawStatement;
     gameStatus.style.color = "black";
   }
