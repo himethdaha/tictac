@@ -103,14 +103,13 @@ const swapTurns = (event) => {
   //Check for winner after each turn
   checkWinner();
   //Check for a tie
-  checkTie();
-  // if (
-  //   (result === true && gameStatus.textContent !== p1WonStatement) ||
-  //   gameStatus.textContent !== p2WontStatement
-  // ) {
-  //   gameStatus.textContent = drawStatement;
-  //   gameStatus.style.color = "black";
-  // }
+  // && gameStatus.textContent !== p1WonStatement) ||
+  // gameStatus.textContent !== p2WontStatement
+  const result = checkTie();
+  if (result === true) {
+    gameStatus.textContent = drawStatement;
+    gameStatus.style.color = "black";
+  }
   //Update scores
   p1Score.textContent = p1ScoreCounter;
   p2Score.textContent = p2ScoreCounter;
